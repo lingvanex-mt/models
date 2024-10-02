@@ -1,0 +1,9 @@
+{
+  "add_source_bos": false,
+  "add_source_eos": false,
+  "bos_token": "<s>",
+  "decoder_start_token": "<s>",
+  "eos_token": "</s>",
+  "layer_norm_epsilon": null,
+  "unk_token": "<unk>"
+}
