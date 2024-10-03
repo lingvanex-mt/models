@@ -1,7 +1,7 @@
 
 # Language Translation Models for CTranslate2
 
-This repository provides access to multiple language translation models that can be used with CTranslate2 and SentencePiece. The models support the following languages:
+This repository provides access to multiple language translation models that can be used with CTranslate2. The models support the following languages:
 
 - English-Kurdish (https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
 - Kurdish-English (https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
