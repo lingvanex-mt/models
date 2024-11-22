@@ -233,7 +233,7 @@ Response:
 }
 ```
 
-## Usage examples in different languages
+## Usage Examples in Different Languages
 You can use the Lingvanex API using the following different languages:
 
 - JavaScript: https://github.com/lingvanex-mt/js-translation-api
