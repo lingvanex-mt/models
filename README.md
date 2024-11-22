@@ -2,7 +2,7 @@
 
 [Try it online!](https://lingvanex.com/translate/) | [API](https://lingvanex.com/products/translationapi/) | [Blog](https://lingvanex.com/blog/)
 
-[![Python versions](https://img.shields.io/pypi/pyversions/lingvanex)](https://pypi.org/project/lingvanex/)
+[![Python versions](https://lingvanex.com/download/static-images/python-image.svg)](https://pypi.org/project/lingvanex/)
 
 Free online language translation in 109 languages.
 [Try our API!](https://lingvanex.com/products/translationapi/)
@@ -12,7 +12,76 @@ After creating an account, you will receive your first 200,000 characters for FR
 
 [Try it online!](https://lingvanex.com/translate/) | [API Docs](https://docs.lingvanex.com/reference/overview)
 
-## API Examples
+## Free Language Translation Models for CTranslate2
+
+Language translation models that can be used with CTranslate2 for free. These machine translation models are designed and trained to work with the CTranslate2 library, optimized for fast translation on both CPUs and GPUs. The models support the following languages:
+- [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
+- [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
+- [English-Samoan](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sm.zip)
+- [Samoan-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sm_en.zip)
+- [English-Xhosa](https://models-for-github.s3.eu-central-1.amazonaws.com/en_xh.zip)
+- [Xhosa-English](https://models-for-github.s3.eu-central-1.amazonaws.com/xh_en.zip)
+- [English-Lao](https://models-for-github.s3.eu-central-1.amazonaws.com/en_lo.zip)
+- [Lao-English](https://models-for-github.s3.eu-central-1.amazonaws.com/lo_en.zip)
+- [English-Corsican](https://models-for-github.s3.eu-central-1.amazonaws.com/en_co.zip)
+- [Corsican-English](https://models-for-github.s3.eu-central-1.amazonaws.com/co_en.zip)
+- [English-Cebuano](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ceb.zip)
+- [Cebuano-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ceb_en.zip)
+- [English-Galician](https://models-for-github.s3.eu-central-1.amazonaws.com/en_gl.zip)
+- [Galician-English](https://models-for-github.s3.eu-central-1.amazonaws.com/gl_en.zip)
+- [English-Yiddish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yi.zip)
+- [Yiddish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yi_en.zip)
+- [English-Swahili](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sw.zip)
+- [Swahili-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sw_en.zip)
+- [English-Yoruba](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yo.zip)
+- [Yoruba-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yo_en.zip)
+
+The models are available for download and you can use them in your projects.
+You can easily run them in your Python environment as shown below.
+### Requirements
+
+To run the models, you need to install ctranslate2 and sentencepiece:
+
+```bash
+pip install ctranslate2 sentencepiece
+```
+
+### Simple Usage Example
+The following code demonstrates how to load and use a model for translation from English to Kurdish (en → ku).
+```python
+import sentencepiece as spm
+from ctranslate2 import Translator
+
+path_to_model = <here_is_your_path_to_the_model>
+source = 'en'
+target = 'ku'
+
+translator = Translator(path_to_model, compute_type='int8')
+source_tokenizer = spm.SentencePieceProcessor(f'{path_to_model}/{source}.spm.model')
+target_tokenizer = spm.SentencePieceProcessor(f'{path_to_model}/{target}.spm.model')
+
+text = [
+  'I need to make a phone call.',
+  'Can I help you prepare food?',
+  'We want to go for a walk.'
+]
+
+input_tokens = source_tokenizer.EncodeAsPieces(text)
+translator_output = translator.translate_batch(
+  input_tokens,
+  batch_type='tokens',
+  beam_size=2,
+  max_input_length=0,
+  max_decoding_length=256
+)
+
+output_tokens = [item.hypotheses[0] for item in translator_output]
+translation = target_tokenizer.DecodePieces(output_tokens)
+print('\n'.join(translation))
+```
+
+
+## API Usage Examples
 
 ### Simple
 
@@ -164,73 +233,6 @@ Response:
 }
 ```
 
-## Free Language Translation Models for CTranslate2
-
-Language translation models that can be used with CTranslate2 for free. The models support the following languages:
-- [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
-- [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
-- [English-Samoan](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sm.zip)
-- [Samoan-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sm_en.zip)
-- [English-Xhosa](https://models-for-github.s3.eu-central-1.amazonaws.com/en_xh.zip)
-- [Xhosa-English](https://models-for-github.s3.eu-central-1.amazonaws.com/xh_en.zip)
-- [English-Lao](https://models-for-github.s3.eu-central-1.amazonaws.com/en_lo.zip)
-- [Lao-English](https://models-for-github.s3.eu-central-1.amazonaws.com/lo_en.zip)
-- [English-Corsican](https://models-for-github.s3.eu-central-1.amazonaws.com/en_co.zip)
-- [Corsican-English](https://models-for-github.s3.eu-central-1.amazonaws.com/co_en.zip)
-- [English-Cebuano](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ceb.zip)
-- [Cebuano-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ceb_en.zip)
-- [English-Galician](https://models-for-github.s3.eu-central-1.amazonaws.com/en_gl.zip)
-- [Galician-English](https://models-for-github.s3.eu-central-1.amazonaws.com/gl_en.zip)
-- [English-Yiddish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yi.zip)
-- [Yiddish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yi_en.zip)
-- [English-Swahili](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sw.zip)
-- [Swahili-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sw_en.zip)
-- [English-Yoruba](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yo.zip)
-- [Yoruba-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yo_en.zip)
-
-You can easily load and run them in your Python environment as shown below.
-### Requirements
-
-To run the models, you need to install ctranslate2 and sentencepiece:
-
-```bash
-pip install ctranslate2 sentencepiece
-```
-
-### Simple Usage Example
-The following code demonstrates how to load and use a model for translation from English to Kurdish (en → ku).
-```python
-import sentencepiece as spm
-from ctranslate2 import Translator
-
-path_to_model = <here_is_your_path_to_the_model>
-source = 'en'
-target = 'ku'
-
-translator = Translator(path_to_model, compute_type='int8')
-source_tokenizer = spm.SentencePieceProcessor(f'{path_to_model}/{source}.spm.model')
-target_tokenizer = spm.SentencePieceProcessor(f'{path_to_model}/{target}.spm.model')
-
-text = [
-  'I need to make a phone call.',
-  'Can I help you prepare food?',
-  'We want to go for a walk.'
-]
-
-input_tokens = source_tokenizer.EncodeAsPieces(text)
-translator_output = translator.translate_batch(
-  input_tokens,
-  batch_type='tokens',
-  beam_size=2,
-  max_input_length=0,
-  max_decoding_length=256
-)
-
-output_tokens = [item.hypotheses[0] for item in translator_output]
-translation = target_tokenizer.DecodePieces(output_tokens)
-print('\n'.join(translation))
-```
-
 ## Desktop Apps
 - [Lingvanex Translator](https://lingvanex.com/products/translator-for-pc/) is an Android and iOS apps [available on the Microsoft Store](https://apps.microsoft.com/detail/9pgwf6lbx4s4?hl=en-il&gl=IL) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-offline-translator/id1254982908?mt=12) that uses the Lingvanex API.
 
@@ -243,6 +245,10 @@ print('\n'.join(translation))
 
 - [Opera for Android](https://www.opera.com/) is a web browser with [integrated Lingvanex support](https://blogs.opera.com/mobile/2023/10/opera-for-android-integrates-lingvanex-translation-service-2/).
 - [Vivaldi](https://vivaldi.com/) is a web browser with [integrated Lingvanex support](https://vivaldi.com/features/translate/).
+
+## Wordpress plugin
+
+- [Falang](https://wordpress.org/plugins/falang/) is a multilanguage plugin for WordPress integrated Lingvanex support.
 
 ## License
 
