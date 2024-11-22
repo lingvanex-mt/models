@@ -1,32 +1,195 @@
+# Lingvanex Translator
 
-# Language Translation Models for CTranslate2
+[Try it online!](https://lingvanex.com/translate/) | [API](https://lingvanex.com/products/translationapi/) | [Blog](https://lingvanex.com/blog/)
 
-This repository provides access to multiple language translation models that can be used with CTranslate2. The models support the following languages:
+[![Python versions](https://img.shields.io/pypi/pyversions/lingvanex)](https://pypi.org/project/lingvanex/)
 
-- English-Kurdish (https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
-- Kurdish-English (https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
-- English-Samoan (https://models-for-github.s3.eu-central-1.amazonaws.com/en_sm.zip)
-- Samoan-English (https://models-for-github.s3.eu-central-1.amazonaws.com/sm_en.zip)
-- English-Xhosa (https://models-for-github.s3.eu-central-1.amazonaws.com/en_xh.zip)
-- Xhosa-English (https://models-for-github.s3.eu-central-1.amazonaws.com/xh_en.zip)
-- English-Lao (https://models-for-github.s3.eu-central-1.amazonaws.com/en_lo.zip)
-- Lao-English (https://models-for-github.s3.eu-central-1.amazonaws.com/lo_en.zip)
-- English-Corsican (https://models-for-github.s3.eu-central-1.amazonaws.com/en_co.zip)
-- Corsican-English (https://models-for-github.s3.eu-central-1.amazonaws.com/co_en.zip)
-- English-Cebuano (https://models-for-github.s3.eu-central-1.amazonaws.com/en_ceb.zip)
-- Cebuano-English (https://models-for-github.s3.eu-central-1.amazonaws.com/ceb_en.zip)
-- English-Galician (https://models-for-github.s3.eu-central-1.amazonaws.com/en_gl.zip)
-- Galician-English (https://models-for-github.s3.eu-central-1.amazonaws.com/gl_en.zip)
-- English-Yiddish (https://models-for-github.s3.eu-central-1.amazonaws.com/en_yi.zip)
-- Yiddish-English (https://models-for-github.s3.eu-central-1.amazonaws.com/yi_en.zip)
-- English-Swahili (https://models-for-github.s3.eu-central-1.amazonaws.com/en_sw.zip)
-- Swahili-English(https://models-for-github.s3.eu-central-1.amazonaws.com/sw_en.zip)
-- English-Yoruba (https://models-for-github.s3.eu-central-1.amazonaws.com/en_yo.zip)
-- Yoruba-English (https://models-for-github.s3.eu-central-1.amazonaws.com/yo_en.zip)
+Free online language translation in 109 languages.
+[Try our API!](https://lingvanex.com/products/translationapi/)
+After creating an account, you will receive your first 200,000 characters for FREE.
 
-Due to space limitations, the models are hosted on AWS. You can easily load and run them in your Python environment as shown below.
+![Translation](https://lingvanex.com/download/static-images/demo-translator.png)
 
-## Requirements
+[Try it online!](https://lingvanex.com/translate/) | [API Docs](https://docs.lingvanex.com/reference/overview)
+
+## API Examples
+
+### Simple
+
+Request:
+
+```javascript
+const url = 'https://api-b2b.backenster.com/b1/api/v3/translate';
+const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    Authorization: 'API Key'
+  },
+  body: JSON.stringify({
+      platform: 'api',
+      from: 'en', 
+      to: 'es',
+      data: 'Hello'
+    })
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+```
+
+Response:
+
+```javascript
+{
+  "err": null,
+  "result": "Hola"
+}
+```
+
+List of language codes: https://docs.lingvanex.com/reference/user-guide
+
+### Auto Detect Language
+
+Request:
+
+```javascript
+const url = 'https://api-b2b.backenster.com/b1/api/v3/translate';
+const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    Authorization: 'API Key'
+  },
+  body: JSON.stringify({
+      platform: 'api',
+      to: 'en',
+      data: 'Auf Wiedersehen'
+    })
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+```
+
+Response:
+
+```javascript
+{
+  "err": null,
+  "result": "Goodbye",
+  "from": "de"
+}
+```
+
+### HTML
+
+Request:
+
+```javascript
+const url = 'https://api-b2b.backenster.com/b1/api/v3/translate';
+const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    Authorization: 'API Key'
+  },
+  body: JSON.stringify({
+      platform: 'api',
+      translateMode: 'html',
+      from: 'en', 
+      to: 'en',
+      data: '<h1>Welcome to the test page</h1>'
+    })
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+```
+
+Response:
+
+```javascript
+{
+  "err": null,
+  "result": "<h1>Bienvenido a la página de prueba</h1>"
+}
+```
+
+### Transliteration
+
+Request:
+
+```javascript
+const url = 'https://api-b2b.backenster.com/b1/api/v3/translate';
+const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    Authorization: 'API Key'
+  },
+  body: JSON.stringify({
+      platform: 'api',
+      from: 'en', 
+      to: 'zh-Hans_CN',
+      data: 'Hello',
+      enableTransliteration: true
+    })
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+```
+
+Response:
+
+```javascript
+{
+  "err": null,
+  "result": "你好",
+  "sourceTransliteration": "Hello",
+  "targetTransliteration": "Ni Hao"
+}
+```
+
+## Free Language Translation Models for CTranslate2
+
+Language translation models that can be used with CTranslate2 for free. The models support the following languages:
+- [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
+- [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
+- [English-Samoan](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sm.zip)
+- [Samoan-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sm_en.zip)
+- [English-Xhosa](https://models-for-github.s3.eu-central-1.amazonaws.com/en_xh.zip)
+- [Xhosa-English](https://models-for-github.s3.eu-central-1.amazonaws.com/xh_en.zip)
+- [English-Lao](https://models-for-github.s3.eu-central-1.amazonaws.com/en_lo.zip)
+- [Lao-English](https://models-for-github.s3.eu-central-1.amazonaws.com/lo_en.zip)
+- [English-Corsican](https://models-for-github.s3.eu-central-1.amazonaws.com/en_co.zip)
+- [Corsican-English](https://models-for-github.s3.eu-central-1.amazonaws.com/co_en.zip)
+- [English-Cebuano](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ceb.zip)
+- [Cebuano-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ceb_en.zip)
+- [English-Galician](https://models-for-github.s3.eu-central-1.amazonaws.com/en_gl.zip)
+- [Galician-English](https://models-for-github.s3.eu-central-1.amazonaws.com/gl_en.zip)
+- [English-Yiddish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yi.zip)
+- [Yiddish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yi_en.zip)
+- [English-Swahili](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sw.zip)
+- [Swahili-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sw_en.zip)
+- [English-Yoruba](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yo.zip)
+- [Yoruba-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yo_en.zip)
+
+You can easily load and run them in your Python environment as shown below.
+### Requirements
 
 To run the models, you need to install ctranslate2 and sentencepiece:
 
@@ -68,3 +231,23 @@ translation = target_tokenizer.DecodePieces(output_tokens)
 print('\n'.join(translation))
 ```
 
+## Desktop Apps
+- [Lingvanex Translator](https://lingvanex.com/products/translator-for-pc/) is an Android and iOS apps [available on the Microsoft Store](https://apps.microsoft.com/detail/9pgwf6lbx4s4?hl=en-il&gl=IL) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-offline-translator/id1254982908?mt=12) that uses the Lingvanex API.
+
+## Mobile Apps
+
+- [Lingvanex Translator](https://lingvanex.com/products/mobile-translator/) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-language-translator/id1254981151) that uses the Lingvanex API.
+- [Phone Call Translator](https://lingvanex.com/products/phone-call-translator/) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator_call) and [available on the App Store](https://apps.apple.com/us/app/phone-call-translator-ip/id1367461351) that uses the Lingvanex API.
+
+## Web browser
+
+- [Opera for Android](https://www.opera.com/) is a web browser with [integrated Lingvanex support](https://blogs.opera.com/mobile/2023/10/opera-for-android-integrates-lingvanex-translation-service-2/).
+- [Vivaldi](https://vivaldi.com/) is a web browser with [integrated Lingvanex support](https://vivaldi.com/features/translate/).
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+If you have any questions, just email info@lingvanex.com
