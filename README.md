@@ -175,7 +175,7 @@ const options = {
       platform: 'api',
       translateMode: 'html',
       from: 'en', 
-      to: 'en',
+      to: 'es',
       data: '<h1>Welcome to the test page</h1>'
     })
 };
