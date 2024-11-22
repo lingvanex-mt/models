@@ -258,7 +258,7 @@ You can use the Lingvanex API using the following different languages:
 
 - [Translator for Browser](https://lingvanex.com/products/all-extensions/) is a web extension with integrated Lingvanex support.
 
-## Translator bot for Slack
+## Translator Bot for Slack
 
 - [Translator for Slack](https://slack.com/marketplace/A8KHN4EDV-translator-translate-languages) is a bot for Slack with integrated Lingvanex support.
 
