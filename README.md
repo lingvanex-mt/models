@@ -233,6 +233,18 @@ Response:
 }
 ```
 
+## Usage examples in different languages
+You can use the Lingvanex API using the following different languages:
+
+- JavaScript: https://github.com/lingvanex-mt/js-translation-api
+- PHP: https://github.com/lingvanex-mt/php-api-translator
+- Swift: https://github.com/lingvanex-mt/swift-api-translator
+- Python: https://github.com/lingvanex-mt/python-translation-api
+- C#: https://github.com/lingvanex-mt/csharp-translation-api
+- GO: https://github.com/lingvanex-mt/lingvanex-mt-go-pkg
+- R: https://github.com/lingvanex-mt/lingvanex-r-pkg
+
+
 ## Desktop Apps
 - [Lingvanex Translator](https://lingvanex.com/products/translator-for-pc/) is an Android and iOS apps [available on the Microsoft Store](https://apps.microsoft.com/detail/9pgwf6lbx4s4?hl=en-il&gl=IL) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-offline-translator/id1254982908?mt=12) that uses the Lingvanex API.
 
@@ -243,12 +255,11 @@ Response:
 
 ## Web browser
 
-- [Opera for Android](https://www.opera.com/) is a web browser with [integrated Lingvanex support](https://blogs.opera.com/mobile/2023/10/opera-for-android-integrates-lingvanex-translation-service-2/).
-- [Vivaldi](https://vivaldi.com/) is a web browser with [integrated Lingvanex support](https://vivaldi.com/features/translate/).
+- [Translator for Browser](https://lingvanex.com/products/all-extensions/) is a web extension with integrated Lingvanex support.
 
-## Wordpress plugin
+## Bot
 
-- [Falang](https://wordpress.org/plugins/falang/) is a multilanguage plugin for WordPress integrated Lingvanex support.
+- [Translator for Slack](https://lingvanex.com/products/slack/) is a bot for Slack with integrated Lingvanex support.
 
 ## License
 
