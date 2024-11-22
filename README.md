@@ -4,7 +4,7 @@
 
 [![Python versions](https://lingvanex.com/download/static-images/python-image.svg)](https://pypi.org/project/lingvanex/)
 
-Free and Open Source Machine Translation Models in 12 languages, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or AWS to perform translations. Instead, its translation engine is powered by the open source [CTranslate2](https://github.com/OpenNMT/CTranslate2) library.
+Free and Open Source Machine Translation Models in 12 languages, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or AWS to perform translations. Instead, its translation engine is powered by the open source [CTranslate2](https://github.com/OpenNMT/CTranslate2) library. Also we have translation models for [100 other languages](https://lingvanex.com/products/on-premise-machine-translation/). Contact us info@lingvanex.com
 
 ![Translation](https://lingvanex.com/download/static-images/demo-translator.png)
 
@@ -37,7 +37,6 @@ The models support the following languages:
 
 The models are available for download and you can use them in your projects.
 You can easily run them in your Python environment as shown below.
-Also we have translation models for [100 other languages](https://lingvanex.com/products/on-premise-machine-translation/). Contact us info@lingvanex.com
 ### Requirements
 
 To run the models, you need to install ctranslate2 and sentencepiece:
@@ -261,7 +260,7 @@ You can use the Lingvanex API using the following different languages:
 
 ## Translator bot for Slack
 
-- [Translator for Slack](https://mickey-hod7786.slack.com/marketplace/A8KHN4EDV-translator-translate-languages) is a bot for Slack with integrated Lingvanex support.
+- [Translator for Slack](https://slack.com/marketplace/A8KHN4EDV-translator-translate-languages) is a bot for Slack with integrated Lingvanex support.
 
 ## License
 
