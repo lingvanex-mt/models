@@ -1,12 +1,10 @@
 # Lingvanex Translator
 
-[Try it online!](https://lingvanex.com/translate/) | [API](https://lingvanex.com/products/translationapi/) | [Blog](https://lingvanex.com/blog/)
+[Try it online!](https://lingvanex.com/translate/) | [Translation API](https://lingvanex.com/products/translationapi/) | [Blog](https://lingvanex.com/blog/)
 
 [![Python versions](https://lingvanex.com/download/static-images/python-image.svg)](https://pypi.org/project/lingvanex/)
 
-Free online language translation in 109 languages.
-[Try our API!](https://lingvanex.com/products/translationapi/)
-After creating an account, you will receive your first 200,000 characters for FREE.
+Free and Open Source Machine Translation Models in 12 languages, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or AWS to perform translations. Instead, its translation engine is powered by the open source [CTranslate2](https://github.com/OpenNMT/CTranslate2) library.
 
 ![Translation](https://lingvanex.com/download/static-images/demo-translator.png)
 
@@ -14,7 +12,7 @@ After creating an account, you will receive your first 200,000 characters for FR
 
 ## Free Language Translation Models for CTranslate2
 
-Free and Open Source Machine Translation Models in 12 languages, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or AWS to perform translations. Instead, its translation engine is powered by the open source CTranslate2 library.
+The models support the following languages:
 
 - [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
 - [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
