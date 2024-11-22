@@ -14,7 +14,8 @@ After creating an account, you will receive your first 200,000 characters for FR
 
 ## Free Language Translation Models for CTranslate2
 
-Language translation models that can be used with CTranslate2 for free. These machine translation models are designed and trained to work with the CTranslate2 library, optimized for fast translation on both CPUs and GPUs. The models support the following languages:
+Free and Open Source Machine Translation Models in 12 languages, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or AWS to perform translations. Instead, its translation engine is powered by the open source CTranslate2 library.
+
 - [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
 - [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
 - [English-Samoan](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sm.zip)
@@ -38,6 +39,7 @@ Language translation models that can be used with CTranslate2 for free. These ma
 
 The models are available for download and you can use them in your projects.
 You can easily run them in your Python environment as shown below.
+Also we have translation models for [100 other languages](https://lingvanex.com/products/on-premise-machine-translation/). Contact us info@lingvanex.com
 ### Requirements
 
 To run the models, you need to install ctranslate2 and sentencepiece:
@@ -233,7 +235,7 @@ Response:
 }
 ```
 
-## Usage Examples in Different Languages
+## Usage examples in different languages
 You can use the Lingvanex API using the following different languages:
 
 - JavaScript: https://github.com/lingvanex-mt/js-translation-api
@@ -246,20 +248,22 @@ You can use the Lingvanex API using the following different languages:
 
 
 ## Desktop Apps
-- [Lingvanex Translator](https://lingvanex.com/products/translator-for-pc/) is an Android and iOS apps [available on the Microsoft Store](https://apps.microsoft.com/detail/9pgwf6lbx4s4?hl=en-il&gl=IL) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-offline-translator/id1254982908?mt=12) that uses the Lingvanex API.
+
+- [Translator for MacOS](https://lingvanex.com/products/macos-translator/) that uses the Lingvanex API.
+- [Translator for Windows](https://lingvanex.com/products/windows-translator/) that uses the Lingvanex API.
 
 ## Mobile Apps
 
 - [Lingvanex Translator](https://lingvanex.com/products/mobile-translator/) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-language-translator/id1254981151) that uses the Lingvanex API.
 - [Phone Call Translator](https://lingvanex.com/products/phone-call-translator/) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator_call) and [available on the App Store](https://apps.apple.com/us/app/phone-call-translator-ip/id1367461351) that uses the Lingvanex API.
 
-## Web browser
+## Web Browser
 
 - [Translator for Browser](https://lingvanex.com/products/all-extensions/) is a web extension with integrated Lingvanex support.
 
-## Bot
+## Translator bot for Slack
 
-- [Translator for Slack](https://lingvanex.com/products/slack/) is a bot for Slack with integrated Lingvanex support.
+- [Translator for Slack](https://mickey-hod7786.slack.com/marketplace/A8KHN4EDV-translator-translate-languages) is a bot for Slack with integrated Lingvanex support.
 
 ## License
 
