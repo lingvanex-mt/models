@@ -1,21 +1,22 @@
 # Lingvanex Translator
 
-[Try it online!](https://lingvanex.com/translate/) | [Translation API](https://lingvanex.com/products/translationapi/) | [Blog](https://lingvanex.com/blog/)
+[Try it online!](https://lingvanex.com/translate/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025) | [Translation API](https://lingvanex.com/products/translationapi/?utm_source=github&utm_medium=link&utm_campaign=24-02-2025) | [Blog](https://lingvanex.com/blog/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025)
 
 [![Python versions](https://lingvanex.com/download/static-images/python-image.svg)](https://pypi.org/project/lingvanex/)
 
 Free and Open Source Machine Translation Models in 12 languages, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or AWS to perform translations. Instead, its translation engine is powered by the open source [CTranslate2](https://github.com/OpenNMT/CTranslate2) library. 
 
-Also we have translation models for [100 other languages](https://lingvanex.com/products/on-premise-machine-translation/). Contact us info@lingvanex.com
+Also we have translation models for [100 other languages](https://lingvanex.com/products/on-premise-machine-translation/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025). Contact us info@lingvanex.com
 
 ![Translation](https://lingvanex.com/download/static-images/demo-translator.png)
 
-[Try it online!](https://lingvanex.com/translate/) | [API Docs](https://docs.lingvanex.com/reference/overview)
+[Try it online!](https://lingvanex.com/translate/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025) | [API Docs](https://docs.lingvanex.com/reference/overview)
 
 ## Free Language Translation Models for CTranslate2
 
 The models support the following languages:
 
+- [Russian-Belarusian](https://models-for-github.s3.eu-central-1.amazonaws.com/ru_be.zip)
 - [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
 - [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)
 - [English-Samoan](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sm.zip)
@@ -248,17 +249,17 @@ You can use the Lingvanex API using the following different languages:
 
 ## Desktop Apps
 
-- [Translator for MacOS](https://lingvanex.com/products/macos-translator/) that uses the Lingvanex API.
-- [Translator for Windows](https://lingvanex.com/products/windows-translator/) that uses the Lingvanex API.
+- [Translator for MacOS](https://lingvanex.com/products/macos-translator/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025) that uses the Lingvanex API.
+- [Translator for Windows](https://lingvanex.com/products/windows-translator/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025) that uses the Lingvanex API.
 
 ## Mobile Apps
 
-- [Lingvanex Translator](https://lingvanex.com/products/mobile-translator/) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-language-translator/id1254981151) that uses the Lingvanex API.
+- [Lingvanex Translator](https://lingvanex.com/products/mobile-translator/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator) and [available on the App Store](https://apps.apple.com/us/app/lingvanex-language-translator/id1254981151) that uses the Lingvanex API.
 - [Phone Call Translator](https://lingvanex.com/products/phone-call-translator/) is an Android and iOS apps [available on the Play Store](https://play.google.com/store/apps/details?id=com.nordicwise.translator_call) and [available on the App Store](https://apps.apple.com/us/app/phone-call-translator-ip/id1367461351) that uses the Lingvanex API.
 
 ## Web Browser
 
-- [Translator for Browser](https://lingvanex.com/products/all-extensions/) is a web extension with integrated Lingvanex support.
+- [Translator for Browser](https://lingvanex.com/products/all-extensions/?utm_source=github&utm_medium=readme&utm_campaign=24-02-2025) is a web extension with integrated Lingvanex support.
 
 ## Translator Bot for Slack
 
