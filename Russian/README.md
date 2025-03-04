@@ -42,23 +42,23 @@ pip install ctranslate2 sentencepiece
 ```
 
 ### Simple Usage Example
-The following code demonstrates how to load and use a model for translation from English to Kurdish (en → ku).
+The following code demonstrates how to load and use a model for translation from Russian to Belarusian (ru → be).
 ```python
 import sentencepiece as spm
 from ctranslate2 import Translator
 
 path_to_model = <here_is_your_path_to_the_model>
-source = 'en'
-target = 'ku'
+source = 'ru'
+target = 'be'
 
 translator = Translator(path_to_model, compute_type='int8')
 source_tokenizer = spm.SentencePieceProcessor(f'{path_to_model}/{source}.spm.model')
 target_tokenizer = spm.SentencePieceProcessor(f'{path_to_model}/{target}.spm.model')
 
 text = [
-  'I need to make a phone call.',
-  'Can I help you prepare food?',
-  'We want to go for a walk.'
+  'Мне нужно позвонить.',
+  'Могу ли я помочь вам приготовить еду?',
+  'Мы хотим прогуляться.'
 ]
 
 input_tokens = source_tokenizer.EncodeAsPieces(text)
