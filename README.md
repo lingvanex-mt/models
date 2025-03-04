@@ -16,6 +16,7 @@ Also we have translation models for [100 other languages](https://lingvanex.com/
 
 The models support the following languages:
 
+- [English-Belarusian](https://models-for-github.s3.eu-central-1.amazonaws.com/en_be.zip)
 - [Russian-Belarusian](https://models-for-github.s3.eu-central-1.amazonaws.com/ru_be.zip)
 - [English-Kurdish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_ku.zip)
 - [Kurdish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ku_en.zip)

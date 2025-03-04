@@ -1,11 +1,12 @@
 
 # Russian to Belarusian Translation
 
-This repository provides pre-trained multilingual translation models designed for fast and accurate translations between various languages, such as Kurdish, Samoan, Xhosa, Lao, Corsican, Cebuano, Galician, Yiddish, Swahili, and Yoruba. These models can be used to translate texts from these languages into English and vice versa, making them suitable for machine translation tasks, language localization projects, and building custom translation tools.
+This repository provides pre-trained multilingual translation models designed for fast and accurate translations between various languages, such as Kurdish, Samoan, Xhosa, Lao, Corsican, Cebuano, Galician, Yiddish, Swahili, Belarusian and Yoruba. These models can be used to translate texts from these languages into English and vice versa, making them suitable for machine translation tasks, language localization projects, and building custom translation tools.
 
 ## Key Features:
 
 - Russian to Belarusian Translation
+- English to Belarusian Translation
 - Support for multiple languages (see full list below)
 - Pre-trained and optimized for accuracy
 - Easy integration into existing translation workflows
@@ -22,6 +23,7 @@ This repository provides pre-trained multilingual translation models designed fo
 - Yiddish
 - Swahili
 - Yoruba
+- Belarusian
 
 ## Use Cases:
 
@@ -31,6 +33,7 @@ This repository provides pre-trained multilingual translation models designed fo
 
 ## Download Models
 - [Russian-Belarusian](https://models-for-github.s3.eu-central-1.amazonaws.com/ru_be.zip)
+- [English-Belarusian](https://models-for-github.s3.eu-central-1.amazonaws.com/en_be.zip)
 
 ## Requirements:
 

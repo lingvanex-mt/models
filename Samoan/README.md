@@ -1,7 +1,7 @@
 
 # Samoan to English Translation
 
-This repository provides pre-trained multilingual translation models designed for fast and accurate translations between various languages, such as Kurdish, Samoan, Xhosa, Lao, Corsican, Cebuano, Galician, Yiddish, Swahili, and Yoruba. These models can be used to translate texts from these languages into English and vice versa, making them suitable for machine translation tasks, language localization projects, and building custom translation tools.
+This repository provides pre-trained multilingual translation models designed for fast and accurate translations between various languages, such as Kurdish, Samoan, Xhosa, Lao, Corsican, Cebuano, Galician, Yiddish, Swahili, Belarusian and Yoruba. These models can be used to translate texts from these languages into English and vice versa, making them suitable for machine translation tasks, language localization projects, and building custom translation tools.
 
 ## Key Features:
 
@@ -23,6 +23,7 @@ This repository provides pre-trained multilingual translation models designed fo
 - Yiddish
 - Swahili
 - Yoruba
+- Belarusian
 
 ## Use Cases:
 
