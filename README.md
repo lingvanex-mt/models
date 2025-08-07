@@ -32,10 +32,6 @@ The models support the following languages:
 - [Cebuano-English](https://models-for-github.s3.eu-central-1.amazonaws.com/ceb_en.zip)
 - [English-Galician](https://models-for-github.s3.eu-central-1.amazonaws.com/en_gl.zip)
 - [Galician-English](https://models-for-github.s3.eu-central-1.amazonaws.com/gl_en.zip)
-- [English-Yiddish](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yi.zip)
-- [Yiddish-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yi_en.zip)
-- [English-Swahili](https://models-for-github.s3.eu-central-1.amazonaws.com/en_sw.zip)
-- [Swahili-English](https://models-for-github.s3.eu-central-1.amazonaws.com/sw_en.zip)
 - [English-Yoruba](https://models-for-github.s3.eu-central-1.amazonaws.com/en_yo.zip)
 - [Yoruba-English](https://models-for-github.s3.eu-central-1.amazonaws.com/yo_en.zip)
 
